@@ -1,5 +1,3 @@
-
-
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -120,44 +118,84 @@
         font-size: 13px;
         letter-spacing: 1.5px;
       }
+
       .bottom-text {
         font-size: 13px;
       }
     }
   </style>
+
   <!-- HW Publishing tracking -->
   <script type="text/javascript" src="https://cdn.nlabs.cloud/assets/main/js/trackcontrol.min.js" defer></script>
   <script type="text/javascript" src="https://cdn.nlabs.cloud/assets/main/js/affiliate-trackcontrol.min.js" defer></script>
   <script type="text/javascript" src="https://cdn.nlabs.cloud/assets/main/js/everflow.min.js" defer></script>
+
   <!-- VTurb: otimização de carregamento -->
-  <script>!function(i,n){i._plt=i._plt||(n&&n.timeOrigin?n.timeOrigin+n.now():Date.now())}(window,performance);</script>
+  <script>
+    !function(i,n){
+      i._plt=i._plt||(n&&n.timeOrigin?n.timeOrigin+n.now():Date.now())
+    }(window,performance);
+  </script>
+
   <link rel="preload" href="https://scripts.converteai.net/105af17e-5270-45f1-b33c-21ca69015053/players/6ab6b91bc3a83f4dca96a928/v4/player.js" as="script">
   <link rel="preload" href="https://scripts.converteai.net/lib/js/smartplayer-wc/v4/smartplayer.js" as="script">
   <link rel="preload" href="https://cdn.converteai.net/105af17e-5270-45f1-b33c-21ca69015053/6ab6b87685abd6b963ba7560/main.m3u8" as="fetch">
+
   <link rel="dns-prefetch" href="https://cdn.converteai.net">
   <link rel="dns-prefetch" href="https://scripts.converteai.net">
   <link rel="dns-prefetch" href="https://images.converteai.net">
   <link rel="dns-prefetch" href="https://license.vturb.com">
 </head>
+
 <body class="cc" data-funnel="homefunnel">
 
-  <!-- ====== TOPO PRETO (igual à imagem) ====== -->
+  <!-- ====== TOPO PRETO ====== -->
   <div class="page">
-    <div class="top-text">Watch until the end to access</div>
 
-  <vturb-smartplayer id="vid-6ab6b91bc3a83f4dca96a928" style="display: block; margin: 0 auto; width: 100%; max-width: 400px;"><div class="vturb-player-placeholder" style="position: relative; width: 100%; padding: 178.21782178217822% 0 0; z-index: 0; background-color: black;"></div></vturb-smartplayer> <script type="text/javascript"> var s=document.createElement("script"); s.src="https://scripts.converteai.net/105af17e-5270-45f1-b33c-21ca69015053/players/6ab6b91bc3a83f4dca96a928/v4/player.js", s.async=!0,document.head.appendChild(s); </script>
+    <div class="top-text">
+      Watch until the end to access
+    </div>
+
+    <vturb-smartplayer
+      id="vid-6ab6b91bc3a83f4dca96a928"
+      style="display: block; margin: 0 auto; width: 100%; max-width: 400px;"
+    >
+      <div
+        class="vturb-player-placeholder"
+        style="position: relative; width: 100%; padding: 178.21782178217822% 0 0; z-index: 0; background-color: black;"
+      ></div>
+    </vturb-smartplayer>
+
+    <script type="text/javascript">
+      var s = document.createElement("script");
+      s.src = "https://scripts.converteai.net/105af17e-5270-45f1-b33c-21ca69015053/players/6ab6b91bc3a83f4dca96a928/v4/player.js";
+      s.async = true;
+      document.head.appendChild(s);
+    </script>
 
     <div class="cta-wrapper" id="cta">
-      <a href="https://cc.govigorboost.com/dtcnew/?hid=b2lkPW9mZl8yMjc4OTkxJmFpZD1hZmZfMTcyNjg5NCZ1aWQ9YmxfMDMzMDE3Ng%3D%3D&affid=aff_1726894&htag=organic" target="_blank" rel="noopener" class="cta-button smartplayer-click-event"
-         aria-label="YES! I WANT MY VIGOR BOOST NOW">YES! I WANT MY VIGOR BOOST NOW</a>
-    </div>
+
+      <a
+        href="https://order.wealthpay.io/po6ciym0dt7u?hid=b2lkPW9mZl8yMjc4OTkxJmFpZD1hZmZfMTcyNjg5NCZ1aWQ9YmxfMTIxMzIzMQ%3D%3D&affid=aff_1726894&htag=organic"
+        target="_blank"
+        rel="noopener"
+        class="cta-button smartplayer-click-event"
+        aria-label="YES! I WANT MY VIGOR BOOST NOW"
+      >
+        YES! I WANT MY VIGOR BOOST NOW
+      </a>
+
     </div>
 
-    <div class="bottom-text">🔊 Make sure your sound is turned on!</div>
+    <div class="bottom-text">
+      🔊 Make sure your sound is turned on!
+    </div>
+
   </div>
 
   <script>
     (function () {
+
       // Tempo do pitch: 35:24 = 2124 segundos de video.
       var PITCH_TIME = 2124;
 
@@ -166,31 +204,52 @@
 
       function reveal() {
         if (shown) return;
+
         shown = true;
         cta.classList.add('is-visible');
-        // espera o layout recalcular depois do display:block antes de rolar
+
+        // Espera o layout recalcular antes de rolar
         requestAnimationFrame(function () {
-          cta.scrollIntoView({ behavior: 'smooth', block: 'center' });
+          cta.scrollIntoView({
+            behavior: 'smooth',
+            block: 'center'
+          });
         });
       }
 
       function bind(player) {
         player.on('timeupdate', function (time) {
-          if (time >= PITCH_TIME) reveal();
+          if (time >= PITCH_TIME) {
+            reveal();
+          }
         });
       }
 
-      // o player registra window.smartplayer.instances de forma assincrona
+      // O player registra window.smartplayer.instances de forma assíncrona
       var tries = 0;
+
       (function wait() {
         var sp = window.smartplayer;
-        if (sp && sp.instances && sp.instances.length) return bind(sp.instances[0]);
-        if (++tries < 600) setTimeout(wait, 200);
+
+        if (sp && sp.instances && sp.instances.length) {
+          return bind(sp.instances[0]);
+        }
+
+        if (++tries < 600) {
+          setTimeout(wait, 200);
+        }
       })();
+
     })();
   </script>
 
-  <script type="text/javascript" src="https://cdn.nlabs.cloud/assets/main/js/vturb-affid.min.js" defer></script>
+  <script
+    type="text/javascript"
+    src="https://cdn.nlabs.cloud/assets/main/js/vturb-affid.min.js"
+    defer
+  ></script>
+
   <script src="../../../../assets/main/js/utm-transfer.js"></script>
+
 </body>
 </html>
